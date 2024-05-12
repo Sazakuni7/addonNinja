@@ -1,5 +1,4 @@
-local players = 
-{
+players = {
         "onlyjovencete",
         "miranas"
 }

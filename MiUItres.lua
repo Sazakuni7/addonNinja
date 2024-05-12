@@ -10,9 +10,10 @@ frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", function(self, event, ...)
     if event == "PLAYER_TARGET_CHANGED" then
         local nombre = UnitName("target")
-        if nombre then
-			print(Ninjas.players[1])
-            print(nombre)
+		local isParty = UnitInParty("target")
+        if nombre and isParty then
+			print(players[2])
+
         end
     end
 end)

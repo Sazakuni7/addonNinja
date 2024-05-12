@@ -9,5 +9,5 @@
 ## SavedVariablesPerCharacter: 
 ## OptionalDeps: 
 
-MiUItres.lua
 Ninjas.lua
+MiUItres.lua
