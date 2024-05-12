@@ -8,7 +8,14 @@ local listaLoaded = false
 
 local function cargarLista()
     if not listaLoaded then
-        local listaData = assert(loadfile("Ninjas.lua"))()
+        local file = assert(io.open("lista.lua", "r")) -- Abrir el archivo en modo lectura
+        local content = file:read("*all") -- Leer todo el contenido del archivo
+        file:close() -- Cerrar el archivo
+
+        -- Ejecutar el contenido del archivo como código Lua
+        local chunk = assert(loadstring(content))
+        local listaData = chunk()
+
         for _, nombre in ipairs(listaData) do
             table.insert(lista, nombre)
         end
