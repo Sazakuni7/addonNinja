@@ -20,21 +20,21 @@ frame:SetScript("OnEvent", function(self, event, ...)
 				end
 			end
 
-			local msgFrame = CreateFrame("FRAME", nil, UIParent)
-			msgFrame:SetWidth(1)
-			msgFrame:SetHeight(1)
-			msgFrame:SetPoint("CENTER")
-			msgFrame:SetFrameStrata("TOOLTIP")
-			msgFrame.text = msgFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-			msgFrame.text:SetPoint("CENTER")
+			-- local msgFrame = CreateFrame("FRAME", nil, UIParent)
+			-- msgFrame:SetWidth(1)
+			-- msgFrame:SetHeight(1)
+			-- msgFrame:SetPoint("CENTER")
+			-- msgFrame:SetFrameStrata("TOOLTIP")
+			-- msgFrame.text = msgFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+			-- msgFrame.text:SetPoint("CENTER")
 			
 
 			if isNinja then
 				print("ALERTA DE NINJA")
-				msgFrame.text:SetText("ALERTA DE NINJA")
+				-- msgFrame.text:SetText("ALERTA DE NINJA")
 			else
 				print("TODO PIOLA")
-				msgFrame.text:SetText("TODO PIOLA")
+				-- msgFrame.text:SetText("TODO PIOLA")
 			end
         end
     end
