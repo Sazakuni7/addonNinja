@@ -12,8 +12,14 @@ frame:SetScript("OnEvent", function(self, event, ...)
         local nombre = UnitName("target")
 		local isParty = UnitInParty("target")
         if nombre and isParty then
-			print(players[2])
-
+			--print(players[2])
+			for i, player in ipairs(players) do
+				if player == string.lower(nombre) then
+					print("ALERTA DE NINJA!!!!!")
+				else
+					print("TODO PIOLA")
+				end
+			end
         end
     end
 end)
