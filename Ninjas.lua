@@ -1,5 +1,6 @@
 players = {
-        "onlyjovencete",
+        "onlyjovencet",
         "miranas",
-		"luxanas"
+		"luxanas",
+		"spii"
 }

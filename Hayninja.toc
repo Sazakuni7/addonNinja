@@ -3,7 +3,7 @@
 ## Notes: It warns you when there is a blacklisted player on the party/instance.
 ## Notes-esES: Te avisa cuando hay un jugador no deseado en la party/instancia.
 ## Version: 0.0.1
-## Author: 3mi
+## Author: 3mi, Nox
 ## DefaultState: enabled
 ## SavedVariables: 
 ## SavedVariablesPerCharacter: 
