@@ -2,19 +2,46 @@ local CUSTOM_TARGET_TEXT = "NINJA"
 
 print('Mi nickname es ' .. UnitName("player"))
 
+-- Cargar la lista externa
+local lista = {}
+local listaLoaded = false
 
-local function VerListaPlayers(unit)
-	print('has clickeado a ' .. UnitName("target"))
-	local playerEnParty = UnitName("target")
-
-	local ninjasFile = loadfile("Ninjas.lua")
-
-	if ninjasFile then
-		ninjasFile()
-	else
-		print("No se puede cargar NInjas.lua!")
-	end
+local function cargarLista()
+    if not listaLoaded then
+        local listaData = assert(loadfile("Ninjas.lua"))()
+        for _, nombre in ipairs(listaData) do
+            table.insert(lista, nombre)
+        end
+        listaLoaded = true
+    end
 end
+
+-- Función para verificar si un nombre está en la lista
+local function verificarNombre(nombre)
+    cargarLista() -- Asegúrate de que la lista esté cargada
+    for _, v in ipairs(lista) do
+        if v == nombre then
+            return true
+        end
+    end
+    return false
+end
+-- Registrar un evento para el clic en un personaje
+local frame = CreateFrame("Frame")
+frame:RegisterEvent("PLAYER_TARGET_CHANGED")
+frame:SetScript("OnEvent", function(self, event, ...)
+    if event == "PLAYER_TARGET_CHANGED" then
+        local nombre = UnitName("target")
+        if nombre then
+            local encontrado = verificarNombre(nombre)
+            if encontrado then
+                print(nombre .. " está en la lista.")
+            else
+                print(nombre .. " no está en la lista.")
+            end
+        end
+    end
+end)
 
 
 hooksecurefunc("UnitFrame_Update", function(frame, isParty)
