@@ -1,0 +1,13 @@
+## Interface: 100207
+## Title: HayNinja!
+## Notes: It warns you when there is a blacklisted player on the party/instance.
+## Notes-esES: Te avisa cuando hay un jugador no deseado en la party/instancia.
+## Version: 0.0.1
+## Author: 3mi
+## DefaultState: enabled
+## SavedVariables: 
+## SavedVariablesPerCharacter: 
+## OptionalDeps: 
+
+MiUItres.lua
+Ninjas.lua
