@@ -1,4 +1,5 @@
 players = {
         "onlyjovencete",
-        "miranas"
+        "miranas",
+		"luxanas"
 }
