@@ -13,28 +13,16 @@ frame:SetScript("OnEvent", function(self, event, ...)
 		local isParty = UnitInParty("target")
 		local isNinja = false
         if nombre and isParty then
-			--print(players[2])
 			for i, player in ipairs(players) do
 				if player == string.lower(nombre) then
 					isNinja = true
 				end
 			end
 
-			-- local msgFrame = CreateFrame("FRAME", nil, UIParent)
-			-- msgFrame:SetWidth(1)
-			-- msgFrame:SetHeight(1)
-			-- msgFrame:SetPoint("CENTER")
-			-- msgFrame:SetFrameStrata("TOOLTIP")
-			-- msgFrame.text = msgFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-			-- msgFrame.text:SetPoint("CENTER")
-			
-
 			if isNinja then
 				print("ALERTA DE NINJA")
-				-- msgFrame.text:SetText("ALERTA DE NINJA")
 			else
 				print("TODO PIOLA")
-				-- msgFrame.text:SetText("TODO PIOLA")
 			end
         end
     end
