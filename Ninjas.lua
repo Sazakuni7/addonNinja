@@ -1,5 +1,5 @@
-local players = {
+local players = 
+{
         "onlyjovencete",
         "miranas"
-		  }
-return players
+}
