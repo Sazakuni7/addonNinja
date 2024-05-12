@@ -11,7 +11,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
     if event == "PLAYER_TARGET_CHANGED" then
         local nombre = UnitName("target")
         if nombre then
-           
+			print(Ninjas.players[1])
             print(nombre)
         end
     end
